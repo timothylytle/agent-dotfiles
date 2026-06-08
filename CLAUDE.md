@@ -25,3 +25,7 @@ This repository contains AI coding agent configurations (commands, skills, templ
 ```
 
 All scripts are idempotent and can be safely re-run.
+
+## Optional cmux skills
+
+`scripts/cmux-skills.sh` is an opt-in installer (not run by `install.sh`) that fetches [cmux](https://github.com/manaflow-ai/cmux) agent skills from GitHub into `skills/`. Both agents symlink `skills/`, so one install serves both. The fetched `cmux*` dirs are gitignored. Use `install` / `uninstall` / `list` subcommands; pin a version with `CMUX_SKILLS_REF`.

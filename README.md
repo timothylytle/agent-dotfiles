@@ -37,6 +37,25 @@ The install script creates symlinks from this repository to the agent's config d
 
 Only symlinks pointing to this repository are removed. Existing directories are left unchanged.
 
+## Optional: cmux skills
+
+[cmux](https://github.com/manaflow-ai/cmux) ships agent skills that let coding agents drive its UI — the built-in agent browser, windows, workspaces, panes/surfaces, settings, and more. These are **opt-in** and not installed by `install.sh`.
+
+`scripts/cmux-skills.sh` fetches a pinned ref of cmux's skills from GitHub (reusing cmux's own installer) and drops them into `skills/`. Since both Claude Code and Codex symlink `skills/`, installing once makes them available to both agents. The fetched `cmux*` directories are gitignored, so they never get committed into your dotfiles.
+
+```bash
+./scripts/cmux-skills.sh list                 # list available cmux skills
+./scripts/cmux-skills.sh install              # install all cmux skills
+./scripts/cmux-skills.sh install --skill cmux --skill cmux-browser
+./scripts/cmux-skills.sh install --dry-run    # preview without installing
+./scripts/cmux-skills.sh uninstall            # remove all cmux skills
+
+# Pin a specific cmux version (default: main)
+CMUX_SKILLS_REF=v1.2.3 ./scripts/cmux-skills.sh install
+```
+
+Restart the agent (or start a new session) after installing. Once installed, ask the agent to use them: "use the cmux-browser skill to open this URL in a new window".
+
 ## Directory Structure
 
 | Directory | Description | Claude Code | Codex |

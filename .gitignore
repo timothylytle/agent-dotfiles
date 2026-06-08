@@ -1,1 +1,5 @@
 .claude/settings.local.json
+
+# Optional cmux skills fetched on demand by scripts/cmux-skills.sh (opt-in, not vendored)
+skills/cmux
+skills/cmux-*
