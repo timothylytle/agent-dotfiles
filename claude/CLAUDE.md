@@ -21,3 +21,7 @@ When reviewing pull requests:
 2. Exclude non-code files from the diff (e.g., `uv.lock`, `package-lock.json`)
 3. If the diff is large, review file-by-file using `gh pr diff -- "path/to/file"` or the Read tool
 4. Never fabricate or guess code content - always read the actual files before commenting on them
+
+## Docket Log
+
+By default, in every repo, keep an interstitial journal of your work on the user's Docket task: one timestamped line per notable event (a skill/command like mr_commit ran, commits, test results, PR, decision, blocker, done). Follow the `docket-log` skill; write entries with `~/.claude/scripts/docket-log.sh -a claude-code-cli_<model>`.

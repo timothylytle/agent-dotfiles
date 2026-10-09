@@ -59,3 +59,7 @@
 - ❓ Do you want me to investigate the flaky test now?
 - ☐ Push changes to GitHub.
 ```
+
+## Docket Log
+- By default, in every repo, keep an interstitial journal of your work on the user's Docket task: one timestamped line per notable event (a skill/prompt like mr_commit ran, commits, test results, PR, decision, blocker, done).
+- Follow the `docket-log` skill; write entries with `~/.codex/scripts/docket-log.sh -a codex-cli_<model>`.
