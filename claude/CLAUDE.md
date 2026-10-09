@@ -24,4 +24,4 @@ When reviewing pull requests:
 
 ## Docket Log
 
-By default, in every repo, keep an interstitial journal of your work on the user's Docket task: one timestamped line per notable event (a skill/command like mr_commit ran, commits, test results, PR, decision, blocker, done). Follow the `docket-log` skill; write entries with `~/.claude/scripts/docket-log.sh -a claude-code-cli_<model>`.
+By default, in every repo, keep an interstitial journal of your work on the user's Docket task: one timestamped line per notable event (a skill/command like mr_commit ran, commits, test results, PR, decision, blocker, done). Follow the `docket-log` skill; write entries with `~/.claude/scripts/docket-log.sh -a claude-code-cli_<model>`. Never complete (close) a Docket task without asking the user first.

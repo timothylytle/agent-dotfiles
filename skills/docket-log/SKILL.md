@@ -57,6 +57,9 @@ One entry per event, right after it happens:
 - A decision, a finding that changes direction, or a blocker
 - Work finished (and whether it was verified)
 
+Logging `done:` does not close the task. Never run `docket complete` without
+asking the user first.
+
 Do not log file reads, searches, or routine steps.
 
 ## Style
